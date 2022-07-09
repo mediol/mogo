@@ -1,16 +1,35 @@
+/* global styles */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    color: #b6b6b6;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat';
+    color: #333;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+/* header */
 .header {
     padding: 17px 0;
 }
@@ -27,11 +46,11 @@ body {
     list-style: none;
     display: flex;
     gap: 55px;
+    font-family: 'Montserrat';
 }
 
 .header .logo {
     margin: 0;
-    font-family: 'Montserrat';
     font-size: 30px;
     line-height: 37px;
     color: #95E1D3;
@@ -51,4 +70,24 @@ body {
 .menu-link:hover {
     color: #F38181;
     border-bottom: 3px solid #F38181;
+}
+
+/* services */
+.section_title {
+    text-align: center;
+}
+
+.section_title .uptitle {
+    font-family: 'Kaushan Script';
+    font-size: 24px;
+    line-height: 35px;
+    color: #333;
+    margin: 0;
+}
+
+.section_title h2 {
+    margin: 20px 0 40px;
+    font-size: 30px;
+    line-height: 37px;
+    font-variant: small-caps;
 }
