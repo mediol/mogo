@@ -29,6 +29,12 @@ h3 {
     font-weight: 400;
 }
 
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
 /* header */
 .header {
     padding: 17px 0;
@@ -41,9 +47,6 @@ h3 {
 }
 
 .menu-list {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
     display: flex;
     gap: 55px;
     font-family: 'Montserrat';
@@ -73,6 +76,10 @@ h3 {
 }
 
 /* services */
+.services {
+    padding: 50px 0;
+}
+
 .section_title {
     text-align: center;
 }
@@ -90,4 +97,24 @@ h3 {
     font-size: 30px;
     line-height: 37px;
     font-variant: small-caps;
+}
+
+.section_title hr {
+    display: block;
+    height: 4px;
+    width: 60px;
+    margin: 0 auto;
+    border: none;
+    background: #F38181;
+}
+
+.services_list {
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services_list_item {
+    width: calc(100% / 3);
+    padding: 0 35px;
 }
