@@ -61,6 +61,49 @@ ul {
     color: #95E1D3;
 }
 
+/* mobile menu */
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ nav {
+    top: 80px;
+    opacity: 1;
+}
+
+.toggle_btn {
+    display: none;
+}
+
+.toggle_btn span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #95E1D3;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+.toggle_btn span::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #95E1D3;
+    position: absolute;
+    top: -8px;
+}
+
+.toggle_btn span::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #95E1D3;
+    position: absolute;
+    top: 8px;
+}
+
 .menu-link {
     text-decoration: none;
     text-transform: uppercase;
@@ -78,8 +121,28 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .toggle_btn {
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+    }
+
     nav {
-        display: none;
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        opacity: 0;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 16px 15px #888;
+        padding-bottom: 30px;
+        transition: top .3s, opacity .3s;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -184,13 +247,50 @@ ul {
     transition: opacity .3s;
 }
 
-.member_photo_wrap:hover::before {
+.member_photo_wrap:hover::before,
+.member_photo_wrap:hover .social_list {
     opacity: 1;
 }
 
 .team_list_member img {
     display: block;
     width: 100%;
+}
+
+.social_list {
+    display: flex;
+    column-gap: 1px;
+    position: absolute;
+    top: calc(50% - (57px / 2));
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.social_list_item {
+    height: 57px;
+    width: 57px;
+    background: #FCE38A;
+    transition: background .3s;
+}
+
+.social_list_item:hover {
+    background: #95E1D3;
+}
+
+.social_link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 15.5px 0; */
+}
+
+.social_link img {
+    height: 26px;
+    width: auto;
+    /* margin: 0 auto; */
 }
 
 @media (max-width: 768px) {
