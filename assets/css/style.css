@@ -238,3 +238,54 @@ section {
 .social_link img {
     height: 26px;
 }
+
+/* footer */
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #B6B6B6;
+    padding: 10px 0;
+}
+
+.footer .copyright {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+}
+
+.footer form {
+    display: flex;
+}
+
+.footer input {
+    height: 40px;
+    padding: 10px;
+}
+
+.footer input[type=email] {
+    width: 230px;
+    border: 1px solid #B6B6B6;
+    border-right: none;
+}
+
+.footer input[type=email]::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+    color: #b6b6b6;
+}
+
+.footer input[type=submit] {
+    width: 150px;
+    border: none;
+    background: #95E1D3;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    font-variant: small-caps;
+    color: #fff;
+}
