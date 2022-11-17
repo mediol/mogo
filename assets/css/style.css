@@ -80,7 +80,15 @@ section {
 
 label {
     height: 30px;
+    display: none;
 }
+
+@media (max-width: 768px) {
+    label {
+        display: block;
+    }
+}
+
 
 .toggle_btn {
     display: block;
